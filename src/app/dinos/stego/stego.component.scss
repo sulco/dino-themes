@@ -1,0 +1,14 @@
+@import "../dinos";
+
+.accent {
+  &.a1 {transition-delay: 0.1s;}
+  &.a2 {transition-delay: 0.2s;}
+  &.a3 {transition-delay: 0.3s;}
+  &.a4 {transition-delay: 0.4s;}
+  &.a5 {transition-delay: 0.5s;}
+  &.a6 {transition-delay: 0.6s;}
+  &.a7 {transition-delay: 0.7s;}
+  &.a8 {transition-delay: 0.8s;}
+  &.a9 {transition-delay: 0.9s;}
+  &.a10 {transition-delay: 1.0s;}
+}

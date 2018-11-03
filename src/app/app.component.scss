@@ -1,0 +1,34 @@
+:host {
+  $main: brown;
+  $accent: orange;
+
+  --color-main: #{$main};
+  --color-main-darken: #{darken($main, 10)};
+  --color-main-darken2: #{darken($main, 20)};
+  --color-main-lighten: #{lighten($main, 20)};
+  --color-accent: #{$accent};
+
+  display: inline-block;
+}
+
+:hover {
+  $main: darken(brown, 10);
+  $accent: blue;
+
+  --color-main: #{$main};
+  --color-main-darken: #{darken($main, 10)};
+  --color-main-darken2: #{darken($main, 20)};
+  --color-main-lighten: #{lighten($main, 20)};
+  --color-accent: #{$accent};
+}
+
+:active {
+  $main: tomato;
+  $accent: yellow;
+
+  --color-main: #{$main};
+  --color-main-darken: #{darken($main, 10)};
+  --color-main-darken2: #{darken($main, 20)};
+  --color-main-lighten: #{lighten($main, 20)};
+  --color-accent: #{$accent};
+}

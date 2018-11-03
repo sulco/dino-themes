@@ -1,0 +1,28 @@
+:host {
+  display: inline-block;
+}
+
+* {
+  transition: all 0.25s;
+}
+
+.main {
+  fill: var(--color-main, #3D9D46);
+}
+
+.main-darken {
+  fill: var(--color-main-darken, #338942);
+}
+
+.main-darken2 {
+  fill: var(--color-main-darken2, #286736);
+}
+
+.main-lighten {
+  fill: var(--color-main-lighten, #7BBC4D);
+}
+
+.accent {
+  fill: var(--color-accent, #DC3C2A);
+  transition: all 1.25s;
+}
