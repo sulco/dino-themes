@@ -8,29 +8,38 @@
   --color-main-lighten: #{lighten($main, 20)};
   --color-accent: #{$accent};
 
-  display: inline-block;
+  display: block;
+  text-align: center;
 }
 
-:hover {
-  $main: darken(brown, 10);
-  $accent: blue;
+.pseudo-classes {
+  cursor: pointer;
 
-  --color-main: #{$main};
-  --color-main-darken: #{darken($main, 10)};
-  --color-main-darken2: #{darken($main, 20)};
-  --color-main-lighten: #{lighten($main, 20)};
-  --color-accent: #{$accent};
+  :hover {
+    $main: darken(brown, 10);
+    $accent: blue;
+
+    --color-main: #{$main};
+    --color-main-darken: #{darken($main, 10)};
+    --color-main-darken2: #{darken($main, 20)};
+    --color-main-lighten: #{lighten($main, 20)};
+    --color-accent: #{$accent};
+  }
+
+  :active {
+    $main: tomato;
+    $accent: yellow;
+
+    --color-main: #{$main};
+    --color-main-darken: #{darken($main, 10)};
+    --color-main-darken2: #{darken($main, 20)};
+    --color-main-lighten: #{lighten($main, 20)};
+    --color-accent: #{$accent};
+  }
 }
 
-:active {
-  $main: tomato;
-  $accent: yellow;
-
-  --color-main: #{$main};
-  --color-main-darken: #{darken($main, 10)};
-  --color-main-darken2: #{darken($main, 20)};
-  --color-main-lighten: #{lighten($main, 20)};
-  --color-accent: #{$accent};
+section {
+  margin-bottom: 8rem;
 }
 
 .col {
@@ -41,13 +50,24 @@
 
 .dino {
   flex-grow: 1;
-  justify-content: center;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   padding: 2rem 1rem 1rem;
+}
+
+select,
+[type="color"] {
+  cursor: pointer;
 }
 
 select {
   max-width: 180px;
   text-align: center;
+}
+
+[type="color"] {
+  margin-top: 1rem;
+  border: none;
+  width: 40px;
+  height: 40px;
 }

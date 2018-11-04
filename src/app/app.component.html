@@ -1,19 +1,45 @@
-<div class="row">
-  <div class="col" *ngFor="let dino of dinos">
-    <div [ngSwitch]="dino" class="dino">
-      <dt-trex *ngSwitchCase="'trex'" [dtTheme]="selectedThemes.trex"></dt-trex>
-      <dt-brachio *ngSwitchCase="'brachio'" [dtTheme]="selectedThemes.brachio"></dt-brachio>
-      <dt-stego *ngSwitchCase="'stego'" [dtTheme]="selectedThemes.stego"></dt-stego>
-      <dt-trice *ngSwitchCase="'trice'" [dtTheme]="selectedThemes.trice"></dt-trice>
-      <dt-ptero *ngSwitchCase="'ptero'" [dtTheme]="selectedThemes.ptero"></dt-ptero>
-    </div>
+<h2 class="mt-4">Angular theming demo</h2>
 
-    <select (input)="setTheme(dino, $event.target.value)" title="theme" class="form-control">
-      <option value="">- select theme -</option>
-      <option value="0">classic</option>
-      <option value="1">marine</option>
-      <option value="2">p!nk</option>
-      <option value="3">wooden</option>
-    </select>
+<section class="themes-predefined">
+  <h4 class="mt-4">Predefined themes</h4>
+  <div class="row mb-4">
+    <div class="col col-lg-3" *ngFor="let dino of dinos.slice(0, 4)">
+      <div [ngSwitch]="dino" class="dino">
+        <dt-trex *ngSwitchCase="'trex'" [dtTheme]="selectedThemes.trex"></dt-trex>
+        <dt-brachio *ngSwitchCase="'brachio'" [dtTheme]="selectedThemes.brachio"></dt-brachio>
+        <dt-stego *ngSwitchCase="'stego'" [dtTheme]="selectedThemes.stego"></dt-stego>
+        <dt-trice *ngSwitchCase="'trice'" [dtTheme]="selectedThemes.trice"></dt-trice>
+        <dt-ptero *ngSwitchCase="'ptero'" [dtTheme]="selectedThemes.ptero"></dt-ptero>
+      </div>
+
+      <select (input)="setTheme(dino, $event.target.value)" title="theme" class="form-control">
+        <option value="">- select theme -</option>
+        <option>classic</option>
+        <option>marine</option>
+        <option>pink</option>
+        <option>wooden</option>
+      </select>
+    </div>
   </div>
+</section>
+
+<div class="row">
+  <section class="themes-picker col">
+    <h4 class="mb-4">Theme picker</h4>
+    <div [dtTheme]="getCustomTheme()" class="d-flex align-items-end">
+      <dt-ptero></dt-ptero>
+      <dt-trex style="transform: rotateY(0.5turn)"></dt-trex>
+    </div>
+    <div>
+      <input *ngFor="let prop of themeProps" type="color" [(ngModel)]="customTheme[prop]">
+    </div>
+  </section>
+
+  <section class="pseudo-classes col">
+    <h4 class="mb-4">Hover / click me</h4>
+    <div>
+      <dt-stego></dt-stego>
+      <dt-trice style="transform: rotateY(0.5turn)"></dt-trice>
+    </div>
+  </section>
 </div>

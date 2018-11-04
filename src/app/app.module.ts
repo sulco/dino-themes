@@ -8,6 +8,7 @@ import { PteroComponent } from './dinos/ptero/ptero.component';
 import { TriceComponent } from './dinos/trice/trice.component';
 import { BrachioComponent } from './dinos/brachio/brachio.component';
 import { ThemeDirective } from './theme.directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ThemeDirective } from './theme.directive';
     ThemeDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
