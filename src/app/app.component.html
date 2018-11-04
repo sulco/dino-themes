@@ -1,6 +1,19 @@
-<dt-trex></dt-trex>
-<dt-brachio></dt-brachio>
-<dt-brachio [dtTheme]="{'color-main': '#bada55'}"></dt-brachio>
-<dt-stego></dt-stego>
-<dt-trice></dt-trice>
-<dt-ptero></dt-ptero>
+<div class="row">
+  <div class="col" *ngFor="let dino of dinos">
+    <div [ngSwitch]="dino" class="dino">
+      <dt-trex *ngSwitchCase="'trex'" [dtTheme]="selectedThemes.trex"></dt-trex>
+      <dt-brachio *ngSwitchCase="'brachio'" [dtTheme]="selectedThemes.brachio"></dt-brachio>
+      <dt-stego *ngSwitchCase="'stego'" [dtTheme]="selectedThemes.stego"></dt-stego>
+      <dt-trice *ngSwitchCase="'trice'" [dtTheme]="selectedThemes.trice"></dt-trice>
+      <dt-ptero *ngSwitchCase="'ptero'" [dtTheme]="selectedThemes.ptero"></dt-ptero>
+    </div>
+
+    <select (input)="setTheme(dino, $event.target.value)" title="theme" class="form-control">
+      <option value="">- select theme -</option>
+      <option value="0">classic</option>
+      <option value="1">marine</option>
+      <option value="2">p!nk</option>
+      <option value="3">wooden</option>
+    </select>
+  </div>
+</div>

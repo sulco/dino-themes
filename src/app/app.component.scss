@@ -32,3 +32,22 @@
   --color-main-lighten: #{lighten($main, 20)};
   --color-accent: #{$accent};
 }
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dino {
+  flex-grow: 1;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem 1rem;
+}
+
+select {
+  max-width: 180px;
+  text-align: center;
+}
