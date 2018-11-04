@@ -7,6 +7,7 @@ import { StegoComponent } from './dinos/stego/stego.component';
 import { PteroComponent } from './dinos/ptero/ptero.component';
 import { TriceComponent } from './dinos/trice/trice.component';
 import { BrachioComponent } from './dinos/brachio/brachio.component';
+import { ThemeDirective } from './theme.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BrachioComponent } from './dinos/brachio/brachio.component';
     StegoComponent,
     PteroComponent,
     TriceComponent,
-    BrachioComponent
+    BrachioComponent,
+    ThemeDirective
   ],
   imports: [
     BrowserModule
